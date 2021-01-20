@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "appSampleTodo"
+  "defaultProject": "appSampleTodo",
+  "cli": {
+    "analytics": "e1c70daa-51e5-4607-bfb0-6dd121c5c7b1"
+  }
 }

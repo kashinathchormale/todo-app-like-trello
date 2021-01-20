@@ -1,0 +1,30 @@
+<!-- DETAIL VISUALISATION -->
+<!-- <div *ngIf="!openForm">
+  <a (click)="openFormAction()" href="#">Click here Edit</a>
+  <h2>{{selectedCard.title}}</h2>
+  <hr />
+  <p>{{selectedCard.content}}</p>
+</div> -->
+
+<!-- DETAIL EDITION -->
+<form
+  
+  [formGroup]="cardForm"
+  (ngSubmit)="updateCardAction(cardForm)"
+> 
+
+  <input formControlName="id" type="hidden" />
+
+  <!-- cardForm.title -->
+  <label>Title</label>
+  <input formControlName="title" type="" />
+  <p *ngIf="cardForm.get('title').hasError('required')" class="error">
+    Card name required
+  </p> 
+ 
+
+  <div class="form-button">
+    <button type="submit" [disabled]="!cardForm.valid">Update</button>
+  </div>
+</form>
+
